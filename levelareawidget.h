@@ -6,6 +6,8 @@
 
 QT_BEGIN_NAMESPACE
 class QComboBox;
+class QGridLayout;
+class QListWidgetItem;
 QT_END_NAMESPACE
 
 class LevelAreaWidget : public QWidget
@@ -15,6 +17,14 @@ public:
     explicit LevelAreaWidget(QWidget *parent = nullptr);
 
 private:
+    void resize();
+
+private slots:
+    void onWidthSelectChanged(int index);
+    void onHeightSelectChanged(int index);
+
+private:
+    QGridLayout* levelArea = nullptr;
     QComboBox* widthSelect = nullptr;
     QComboBox* heightSelect = nullptr;
 };

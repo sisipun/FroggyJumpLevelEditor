@@ -13,11 +13,14 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
-    main.cpp
+    jumpertype.h
+    platformtype.h
 
     levelareawidget.h levelareawidget.cpp
 
     leveleditor.h leveleditor.cpp leveleditor.ui
+
+    main.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
